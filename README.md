@@ -1,24 +1,5 @@
-# README
+# ZONAWIKI
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+###App TO-DO.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+**To-Do list App**, built with [Ruby On Rails](https://rubyonrails.org/), update and delete your tasks.
