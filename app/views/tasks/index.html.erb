@@ -1,3 +1,53 @@
-<div class="alert alert-primary" role="alert">
-  A simple primary alert—check it out!
-</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="text-center">Lista de Tareas de </h1>
+      </div>
+    </div>
+
+  <!-- Boton crear nueva tarea -->
+    <div class="row">
+      <div class="col-12">
+        <%= link_to "Tarea Nueva".html_safe, new_task_path, remote: true, class: "btn btn-lg pull-left", id: "nuevo" %>
+      </div>
+    </div>
+
+  <!-- Tabla lista de tareas -->
+    <div class="row">
+      <div class="col-12">
+        <div class="table-responsive-lg">
+          <table class="table table-bordered">
+            <thead class="text-center">
+              <tr>
+                <th>Tarea</th>
+                <th>Prioridad</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tasks" class="text-center">
+              <%= render @tasks %>
+            </tbody>
+          </table>
+            <%= render 'dialog' %>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+<!-- Si el usuario no esta logeado lo invitara a crear cuenta o iniciar sesion -->
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <blockquote class="blockquote text-center">
+          <h1>
+            TO-DO list, la App que lleva un registro de tus tareas pendientes.
+          </h1>
+          <br>
+        </blockquote>
+      </div>
+    </div>
+
+
+  </div>
