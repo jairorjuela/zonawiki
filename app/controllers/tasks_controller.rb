@@ -20,14 +20,14 @@ class TasksController < ApplicationController
       else
         format.json {render json: @task.errors.full_messages, status: :unprocessable_entity}
       end
-    end 
+    end
   end
 
   def update
     respond_to do |format|
       if @task.update(task_params)
         format.json { head :no_content}
-        format.js
+        format.js { flash[:notice] =  'Tarea Actualizada'}
       else
         format.json { render json: @task.errors.full_messages, status: :unprocessable_entity }
       end

@@ -1,7 +1,13 @@
 <!-- Cuerpo de la Tabla donde se renderizan las tareas  -->
 <tr id="task_<%= task.id %>" class="<%= task.done %>">
   <td><%= task.name %></td>
-  <td><%= task.priority %></td>
+  <% if task.priority == 'Alta' %>
+    <td id="alta">Prioridad Alta</td>
+  <% elsif task.priority == 'Media' %>
+    <td id="media">Prioridad Media</td>
+  <% else %>
+    <td>Prioridad Baja</td>
+  <% end %>
 
 
   <td>
