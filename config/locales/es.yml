@@ -1,0 +1,38 @@
+es:
+  errors:
+    messages:
+      blank: "no puede estar en blanco"
+      invalid: "es inválido"
+      taken: "ya eesta registrado"
+      not_saved: "Usuario No puede ser creado"
+
+  activerecord:
+    attributes:
+      user:
+        name: "Nombre"
+        password: "Contraseña"
+      product:
+        name: "Nombre"
+
+  devise:
+    failure:
+      user:
+        invalid: "Mail o Contraseña Invalidos"
+        not_found_in_database: "Usuario no registrado"
+    sessions:
+      user:
+        signed_in: "Ingreso Exitoso, Bienvenido a TO-DO App"
+        signed_out: "Salida exitosa, vuelve pronto"
+    registrations:
+      user:
+        signed_up: "cuenta creada con exito! Gracias por ingresar a TO-DO App"
+
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              too_short: "contraseña demasiado corta, minimo seis caracteres"
+            password_confirmation:
+              confirmation: "Las contraseñas no coinciden"
