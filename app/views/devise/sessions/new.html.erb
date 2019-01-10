@@ -1,0 +1,45 @@
+
+<!-- Formulario para el inicio de una nueva sesion -->
+<div class="container">
+  <div class="row justify-content-md-center">
+
+    <div class="col-4">
+
+      <h1>Ingresar</h1>
+      <br>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="field">
+          <%= f.label :email, ('<h5><i class="fas fa-at"></i>  Ingresa tu E-mail</h5>'.html_safe) %>
+          <%= f.email_field :email, autofocus: true, class: 'form-control input-lg', autocomplete: "email", placeholder: "Correo electrónico" %>
+        </div>
+
+        <div class="field">
+          <br>
+          <%= f.label :password, ('<h5><i class="fas fa-key"></i>  Ingresa tu contraseña</h5>'.html_safe) %>
+          <%= f.password_field :password, class: 'form-control input-lg', autocomplete: "current-password", placeholder: "Contraseña" %>
+        </div>
+
+        <div class="text-right">
+          <br>
+          <%= submit_tag("Ingresar", class: 'btn btn-outline-info btn-block btn-lg') %>
+        </div>
+        <br>
+
+        <%= link_to "Crear cuenta", new_user_registration_path, class: "btn btn-lg pull-left", id: "nuevo" %>
+
+      <% end %>
+
+    </div>
+
+    <div class="col-8 py-5 px-lg-4">
+      <blockquote class="blockquote text-center">
+        <br>
+        <br>
+        <h1>
+          TO-DO list, la App que lleva un registro de tus tareas pendientes.
+        </h1>
+      </blockquote>
+    </div>
+
+  </div>
+</div>
